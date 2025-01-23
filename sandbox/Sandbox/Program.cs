@@ -4,34 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        //
-        string adjective = getAdjective();
-        string noun = getNoun();
-        
-        int number = Multiply(3,4);
-        Console.WriteLine($"I looked out the window saw {number} {adjective} {noun}");
+        Movie favoriteMovie = new Movie();
+        favoriteMovie._title = "Star Wars";
+        favoriteMovie._year = 1977;
+        favoriteMovie._rating = "PG";
+        favoriteMovie._runtime = 150;
+
+        Movie otherMovie = new Movie();
+        otherMovie._title = "Avatar";
+        otherMovie._year = 2009;
+        otherMovie._rating = "PG-13";
+        otherMovie._runtime = 162;
+
+        favoriteMovie.Display();
+
+        DisplayMovie(favoriteMovie);
+        DisplayMovie(otherMovie);
     }
-    static int Multiply(int number1,int number2){
-       return number1 * number2;
-    }
-    static string getAdjective()
-    {
-        List<string> words = new List<string>();
-        words.Add("blue");
-        words.Add("yellow");
-        words.Add("big");
-        words.Add("small");
-
-        string adjective = "blue";
-
-        return adjective;
-
-        
-    }
-
-    static string getNoun(){
-        string noun = "bird";
-        return noun;
-
-    }
+    
+    
 }

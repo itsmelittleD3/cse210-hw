@@ -2,26 +2,57 @@ using System;
 
 class Program
 {
+    static void DisplayMenu()
+    {
+        Console.WriteLine("Menu: ");
+        Console.WriteLine("1) Add new job");
+        Console.WriteLine("2) Display resume");
+        Console.WriteLine("3) Quit");
+        Console.WriteLine();
+    }
+
     static void Main(string[] args)
     {
-        Job job1 = new Job();
-        job1._company = "(Microsoft)";
-        job1._jobTitle = "Software Engineer";
-        job1._startYear = 2019;
-        job1._endYear = 2022;
+        bool keepRunning = true;
+        Resume theResume = new Resume();
+       while (keepRunning)
+       {
+        DisplayMenu();
 
-        Job job2 = new Job();
-        job1._company = "(Apple)";
-        job1._jobTitle = "Manager";
-        job1._startYear = 2022;
-        job1._endYear = 2023;
+        Console.Write("Enter choice: ");
+        string choice = Console.ReadLine();
 
-        Resume myResume = new resume();
-        myresume._name = "Allison Rose";
+        if (choice == "1")
+        {
+            //add new job
+            Console.Write("What is the name of the company");
+            string company = Console.ReadLine();
 
-        myResume._jobs.Add(job1);
-        myResume._jobs.Add(job2);
-        myResume.Display();
+            Console.Write("What is the position? ");
+            string position = Console.ReadLine();
+
+            Job newJob = new Job();
+            newJob._company = company;
+            newJob._title = position;
+            newJob._startYear = "2005";
+            newJob._endYear = "2025";
+
+            theResume._jobs.Add(newJob);
+
+        }
+        if(choice == "2")
+        {
+            theResume.Display();
+        }
+        if(choice == "3")
+        {
+            keepRunning = false;
+        }
+        else{
+            Console.WriteLine("Please choose one of the displayed choices.");
+        }
+
+       }
     }
     
     

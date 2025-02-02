@@ -2,24 +2,43 @@ using System;
 
 class Program
 {
+    static void DisplayMenu()
+    {
+        Console.WriteLine("Menu: ");
+        Console.WriteLine("1) Add new Job");
+        Console.WriteLine("2) Display resume");
+        Console.WriteLine("3) Quit");
+        Console.WriteLine();
+    }
+
     static void Main(string[] args)
     {
-        Movie favoriteMovie = new Movie();
-        favoriteMovie._title = "Star Wars";
-        favoriteMovie._year = 1977;
-        favoriteMovie._rating = "PG";
-        favoriteMovie._runtime = 150;
+        bool keepRunning = true;
+        Resume theResume = new Resume();
+       while (keepRunning)
+       {
+        DisplayMenu();
 
-        Movie otherMovie = new Movie();
-        otherMovie._title = "Avatar";
-        otherMovie._year = 2009;
-        otherMovie._rating = "PG-13";
-        otherMovie._runtime = 162;
+        Console.Write("Enter choice: ");
+        string choice = Console.ReadLine();
 
-        favoriteMovie.Display();
+        if (choice == "1")
+        {
+            //add new job
+        }
+        if(choice == "2")
+        {
+            //display resume
+        }
+        if(choice == "3")
+        {
+            //quit
+        }
+        else{
+            Console.WriteLine("Please choose one of the displayed choices.");
+        }
 
-        DisplayMovie(favoriteMovie);
-        DisplayMovie(otherMovie);
+       }
     }
     
     

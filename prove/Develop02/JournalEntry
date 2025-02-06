@@ -7,30 +7,32 @@ namespace JournalApp
         public string Date { get; }
         public string Prompt { get; }
         public string Response { get; }
+        public string Feeling { get; }
 
-        public JournalEntry(string date, string prompt, string response)
+        public JournalEntry(string date, string prompt, string response, string feeling)
         {
             Date = date;
             Prompt = prompt;
             Response = response;
+            Feeling = feeling;
         }
 
         public override string ToString()
         {
-            return $"{Date} - {Prompt}\nResponse: {Response}\n";
+            return $"{Date} - {Prompt}\nResponse: {Response} Feeling:{Feeling}\n";
         }
 
         public string ToFileFormat()
         {
-            return $"{Date}|{Prompt}|{Response}";
+            return $"{Date}|{Prompt}|{Response}{Feeling}";
         }
 
         public static JournalEntry FromFileFormat(string line)
         {
             string[] parts = line.Split('|');
-            if (parts.Length == 3)
+            if (parts.Length == 4)
             {
-                return new JournalEntry(parts[0], parts[1], parts[2]);
+                return new JournalEntry(parts[0], parts[1], parts[2], parts[3]);    
             }
             return null;
         }

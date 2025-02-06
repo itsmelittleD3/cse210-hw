@@ -8,10 +8,11 @@ namespace JournalApp
     {
         private List<JournalEntry> entries = new List<JournalEntry>();
 
-        public void AddEntry(string prompt, string response)
+        public void AddEntry(string prompt, string response, string feeling)
         {
             string date = DateTime.Now.ToString("yyyy-MM-dd");
-            entries.Add(new JournalEntry(date, prompt, response));
+            
+            entries.Add(new JournalEntry(date, prompt, response, feeling));
         }
 
         public void DisplayEntries()

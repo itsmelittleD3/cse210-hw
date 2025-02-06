@@ -38,7 +38,11 @@ namespace JournalApp
                         Console.WriteLine($"\nPrompt: {prompt}");
                         Console.Write("Your response: ");
                         string response = Console.ReadLine();
-                        journal.AddEntry(prompt, response);
+
+                        Console.Write("How are you feeling today? "); 
+                        string feeling = Console.ReadLine();
+
+                        journal.AddEntry(prompt, response, feeling);
                         break;
 
                     case "2":
@@ -67,7 +71,7 @@ namespace JournalApp
                 }
             }
 
-            Console.WriteLine("Goodbye!");
+            Console.WriteLine("Goodbye!!");
         }
 
         static string GetRandomPrompt()

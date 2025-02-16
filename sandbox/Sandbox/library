@@ -1,0 +1,32 @@
+public class Library 
+{
+    private List<book> _books;
+    public Library()
+    {
+        _books = new List<book>();
+    }
+    public void DisplayCatalog()
+    {
+        console.writeline("The catalog is:");
+
+        foreach (book b in _books)
+        {
+            b.Display();
+        }
+    }
+}
+
+class Person
+{
+    private int age; // Private field
+
+    public Person(int age)
+    {
+        this.age = age;
+    }
+
+    public int GetAge() // Safe way to access age
+    {
+        return age;
+    }
+}

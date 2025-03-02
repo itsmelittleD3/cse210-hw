@@ -2,7 +2,7 @@ public class Book
 {
     private string _title;
     private string _author;
-    private sting _checkOutDate;
+    private string _checkOutDate;
 
     pubic book(string title, string author)
     {

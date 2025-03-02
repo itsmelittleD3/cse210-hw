@@ -1,15 +1,9 @@
-using system.runtime.serializatoin;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        book b1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
-        book b2 = new Book("To Kill a Mockingbird", "Harper Lee");
-
-        b1.checkOut();
-
-        b1.Display();
-        b2.Display();
+        Teacher theTeacher = new Teacher("John", "Warner", "M", "101");
+        theTeacher.DisplayName();
     }
 }

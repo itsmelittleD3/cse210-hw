@@ -26,7 +26,7 @@ class Program
 
         List<Video> videos = new List<Video> { video1, video2, video3, video4 };
 
-        foreach (Video video in videos)
+        foreach (Video video in videos)// I just put the display in here bc it was easier to see when i run it
         {
             video.DisplayInfo();
         }

@@ -6,8 +6,7 @@ class BreathingActivity : Activity
 
     public void Run()
     {
-        StartMessage("Breathing Activity", 
-            "This activity will help you relax by guiding you through slow breathing.\nClear your mind and focus on your breath.");
+        StartMessage("Breathing Activity", "This activity will help you relax by guiding you through slow breathing.\nClear your mind and focus on your breath.");
 
         PauseWithAnimation();
         Console.Write("");

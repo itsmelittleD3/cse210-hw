@@ -10,7 +10,7 @@ class ReflectingActivity : Activity
         "Think of a time when you did something really difficult.",
         "Think of a time when you helped someone in need.",
         "Think of a time when you did something truly selfless."
-    };
+    }
 
     private List<string> questions = new List<string>
     {

@@ -30,7 +30,7 @@ class ListingActivity : Activity
         Random rand = new Random();
         string prompt = prompts[rand.Next(prompts.Count)];
         Console.WriteLine($"\n{prompt}");
-        Console.Write("You will now begin listing items...");
+        Console.WriteLine("You will now begin listing items...");
         Thread.Sleep(2000); // Short delay to prepare user
 
         List<string> responses = new List<string>();

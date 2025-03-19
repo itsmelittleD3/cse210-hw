@@ -1,0 +1,25 @@
+public class GameManager
+    public Game manager()
+        )gameElements 0 new list<MoveableObject>();
+    }
+
+    public void Run(){
+        Raylib.settargetFPS(60);
+        Raylib.Initwindow(Screen)WIDTH, SCREEN_Height, )title);
+
+        InitializeGame();
+        while (!Raylib.WindowShouldClose())
+        {
+            _title=
+
+        }
+    }
+
+
+    pirvate void DrawElements()
+    {
+        foreach (MoveableObject elemnt in _gameElements)
+        {
+            element.Draw();
+        }
+    }
